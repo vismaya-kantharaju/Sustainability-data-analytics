@@ -33,12 +33,12 @@
 - **local database** :
   
     ### preprocessing module
-      - Data for 4 parameters (electricity consumed, solid-waste generated, downstream transportation, ambient temperature) is extracted from the SQLite database 
+    - Data for 4 parameters (electricity consumed, solid-waste generated, downstream transportation, ambient temperature) is extracted from the SQLite database 
         which is recorded for a year.
-      - Each parameter has different sources, electricity consumed :     , solid-waste generated :   , downstream transportation.
-      - Data is cleaned, and normalized. Total carbon emission is calculated using the respective carbon offset values.
-      - The data is classified as offset and embodied carbon , also w.r.t different scopes of emission.
-      - variation of ambient temperature w.r.t electricity consumed using statistical analysis is done.
+    - Each parameter has different sources, electricity consumed :     , solid-waste generated :   , downstream transportation.
+    - Data is cleaned, and normalized. Total carbon emission is calculated using the respective carbon offset values.
+    - The data is classified as offset and embodied carbon , also w.r.t different scopes of emission.
+    - variation of ambient temperature w.r.t electricity consumed using statistical analysis is done.
     
      ### Machine learning module 
     - outliers are detected using the anomaly detection module and the data is forecasted for the next month using the forecasting module.
@@ -49,14 +49,14 @@
 - **Remote database**:
 
      ### preprocessing module
-      - Data for electricity consumed is extracted from the MySql database from the EC2 instance.
-      - this data is tracked in real-time from a simulator that represents a real-estate environment and stored in the database via MQTT broker
-      - the electricity data is cleaned and normalized and carbon emission is calculated from its carbon offset values, an option is given to the user to enter the 
-        carbon offset value
-      - if the carbon emission reaches a certain level a notification is sent to the recipient.
+    - Data for electricity consumed is extracted from the MySql database from the EC2 instance.
+     - this data is tracked in real-time from a simulator that represents a real-estate environment and stored in the database via MQTT broker
+    - the electricity data is cleaned and normalized and carbon emission is calculated from its carbon offset values, an option is given to the user to enter the 
+       carbon offset value
+  - if the carbon emission reaches a certain level a notification is sent to the recipient.
     
      ### visualization module
-      - the visualization is created using matplotlib to track the changes in real time.
+    - the visualization is created using matplotlib to track the changes in real time.
 
 ## Conclusion
 This project bridges the gap in ESG reporting by leveraging advanced data analytics and AI techniques. Providing transparent and real-time assessments of companies' ESG performance empowers socially conscious investors to make informed decisions aligned with their values.
