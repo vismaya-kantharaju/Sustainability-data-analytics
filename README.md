@@ -30,6 +30,7 @@
 
 ## Implementation
 - **Selection of  local or remote database**
+  
 - **local database** :
   
     ### preprocessing module
@@ -53,10 +54,10 @@
      - this data is tracked in real-time from a simulator that represents a real-estate environment and stored in the database via MQTT broker
     - the electricity data is cleaned and normalized and carbon emission is calculated from its carbon offset values, an option is given to the user to enter the 
        carbon offset value
-  - if the carbon emission reaches a certain level a notification is sent to the recipient.
+    - if the carbon emission reaches a certain level a notification is sent to the recipient.
     
      ### visualization module
-    - the visualization is created using matplotlib to track the changes in real time.
+     - the visualization is created using matplotlib to track the changes in real time.
 
 ## Conclusion
 This project bridges the gap in ESG reporting by leveraging advanced data analytics and AI techniques. Providing transparent and real-time assessments of companies' ESG performance empowers socially conscious investors to make informed decisions aligned with their values.
