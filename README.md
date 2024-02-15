@@ -1,4 +1,4 @@
-# Project Portfolio: Leveraging Data Analytics and AI for ESG Investing
+# Project Portfolio: Leveraging Data science and visualization for Sustainability Investing and reporting 
 
 ## Introduction
 - Environmental, Social, and Governance (ESG) investing is gaining traction in the financial world, with socially conscious investors seeking to align their investments with their values. However, there's a lack of standardized measures and a credibility gap for evaluating companies' performance in ESG areas. This project addresses this challenge by leveraging data analytics and machine learning techniques to provide transparent ESG assessments.
