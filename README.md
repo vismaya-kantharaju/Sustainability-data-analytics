@@ -29,14 +29,15 @@
 
 
 ## Implementation
-- **Selection of  local or remote database**
+- **Selection of  local or remote database** : based on the requirements option to choose between the two databases based on real-time or non-real-time updates.
   
 - **local database** :
   
     ### preprocessing module
     - Data for 4 parameters (electricity consumed, solid-waste generated, downstream transportation, ambient temperature) is extracted from the SQLite database 
-        which is recorded for a year.
-    - Each parameter has different sources, electricity consumed :     , solid-waste generated :   , downstream transportation.
+        which is recorded for a year and stored locally.
+    - Each parameter has different sources, electricity consumed :('HVAC', 'Lighting', 'Appliances & Equipment', 'Elevators & Escalators') , solid-waste generated : ('Office Paper Waste', 'Organic Waste', 
+      'Electronic Waste', 'Construction Waste', 'NON-Recyclable Waste')  , downstream transportation: ('Supply Chain', 'Flights', 'Logistics & Delivery Trucks')
     - Data is cleaned, and normalized. Total carbon emission is calculated using the respective carbon offset values.
     - The data is classified as offset and embodied carbon , also w.r.t different scopes of emission.
     - variation of ambient temperature w.r.t electricity consumed using statistical analysis is done.
