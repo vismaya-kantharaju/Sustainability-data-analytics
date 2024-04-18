@@ -1,0 +1,34 @@
+## Accessing Data from Remote Database on AWS
+
+### Simulation Environment and Data Collection
+A simulation environment is implemented to replicate the architecture of a real-life IoT network for data collection. This environment generates data for electricity consumption, producing voluminous data for each parameter.
+
+### Cloud Database Storage
+The generated data is stored in an SQL database on the AWS cloud platform. The data is sent to the cloud database using the Paho MQTT client, which communicates with the Paho MQTT broker running on an EC2 instance within the AWS infrastructure.
+
+### Python Code for Database Connection
+A Python program is developed to connect to the remote MySQL database hosted on an AWS EC2 instance. The program utilizes the MySQL.connector library to establish a connection, specifying the following parameters:
+- Hostname
+- Port
+- Username
+- Password
+- Database name
+
+### Data Retrieval and Processing
+1. **Retrieving Data**:
+   - The program extracts electricity consumption values and timestamps from the retrieved data.
+   - It executes a SQL query using a cursor and fetches the result using `mycursor.execute()` and `mycursor.fetchall()` methods.
+   - Data is retrieved from a database table named `received_messages`.
+
+2. **Extracting Values and Timestamps**:
+   - JSON parsing (`json.loads`) is used to extract relevant information from the JSON string stored in the `json_data` column of each row.
+   - The program iterates over the fetched result, parsing JSON data to retrieve electricity consumed values and timestamps.
+   - Data is organized in a dictionary named `electricity_consumed_dict`, where each date has associated values and timestamps.
+
+3. **Calculating Carbon Emissions**:
+   - Carbon emissions are calculated for each day based on the total electricity consumed.
+   - The program iterates over `electricity_consumed_dict`, sums the values for each date, and multiplies the total electricity consumed by the emission offset to calculate carbon emissions.
+   - Results are stored in a dictionary named `carbon_emissions`, with dates as keys.
+
+### Conclusion
+By connecting to the remote MySQL database on AWS EC2 and processing the retrieved data, the Python program facilitates the extraction of electricity consumption information and the calculation of carbon emissions. This approach enables efficient data analysis and supports environmental monitoring and management efforts.
